@@ -35,7 +35,9 @@ jobs:
           packer init .
           ls
       - name: make the template
-        run: packer build .
+        run: |
+          ls
+          packer build .
 
       # Runs a set of commands using the runners shell
       #- name: Run a multi-line script
