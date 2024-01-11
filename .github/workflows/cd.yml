@@ -33,6 +33,7 @@ jobs:
         run: |
           cd ubuntu22.4-jenkins/
           packer init .
+          ls
       - name: make the template
         run: packer build .
 
