@@ -27,5 +27,6 @@ jobs:
       - name: Init build
         run: |
           cd $MAINFOLDER
+          ls -la
           packer init .
           packer build . -var aws_access_key=${{ secrets.AWS_ACCESS_KEY }} -var aws_secret_key=${{ secrets.AWS_SECRET_KEY }}
