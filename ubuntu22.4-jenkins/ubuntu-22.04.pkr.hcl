@@ -8,6 +8,8 @@ packer {
 }
 
 source "amazon-ebs" "ubuntu" {
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
   ami_name      = "ubuntu-22.04-jenkins"
   instance_type = "t2.micro"
   region        = "us-east-1"

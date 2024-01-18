@@ -7,7 +7,6 @@ on:
     branches: [ "master" ]
 
   workflow_dispatch:
-
 env:
   MAIN_FOLDER: ubuntu22.4-jenkins/ 
 
@@ -29,4 +28,4 @@ jobs:
       - name: Init build
         run: |
           packer init .
-          packer build .
+          packer build . -var aws_access_key=${{ secrets.AWS_ACCESS_KEY }} -var aws_secret_key=${{ secrets.AWS_SECRET_KEY }}
